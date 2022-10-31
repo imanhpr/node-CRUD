@@ -1,0 +1,18 @@
+<main class="container mx-auto bg-zinc-800 m-3 rounded outline outline-1 outline-gray-400 lg:max-w-2xl">
+    <div class="text-center text-2xl pt-4"><h2 class="font-semibold"><%= title %> </h2></div>
+    <form method="POST" class="flex flex-col p-4">
+        <input type="hidden" name="csrf_token" value="<%= csrf_token %>">
+        <div class="my-2">
+            <label class="text-2xl" for="email">ایمیل :</label>
+            <input type="email" id="email" name="email" class="mt-2 g-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+        </div>
+        <div class="my-2">
+            <label class="text-2xl" for="password">رمز عبور :</label>
+
+            <input type="password" id="password" name="password" class="mt-2 g-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+        </div>
+        <div>
+            <button class="bg-black text-yellow-500 rounded-lg px-4 py-1 hover:outline hover:outline-1 hover:outline-yellow-400  text-2xl"><%= btnText %> </button>
+        </div>
+    </form>
+</main>

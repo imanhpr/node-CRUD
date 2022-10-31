@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/woff/IRANSansX-Bold.woff") format("woff"),
+      url("../fonts/woff2/IRANSansX-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/woff/IRANSansX-Regular.woff") format("woff"),
+      url("../fonts/woff2/IRANSansX-Regular.woff2") format("woff2");
+  }
+  html {
+    font-family: IRANSansX;
+    @apply bg-zinc-600 text-white;
+  }
+}
+@tailwind utilities;

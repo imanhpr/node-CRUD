@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <%- include('inc/head') %>
+</head>
+
+<body>
+    <%- include('inc/nav') %>
+    <%- include('inc/messages' , {errors:errors})%>
+    <main class="container mx-auto mt-2">
+        <% if (contents.length >= 1) { %>         
+            <% for (content of contents) {%>
+                <article class="bg-zinc-800 my-2 rounded p-2">
+                    <header>
+                        <h2 class="text-3xl text-yellow-400"><%= content.subject%></h2>
+                        <div class="flex space-x-2 flex-row-reverse justify-end" >
+                            <span class="bg-blue-600 rounded p-1">نویسنده : <%= content.User.email %></span>
+                            <span class="bg-purple-600 rounded p-1">تاریخ : <%= content.createdAt %> </span>
+                        </div>
+                    </header>
+                    <hr class="my-2 border-zinc-500">
+                    <main><%- content.content %></main>
+                </article>
+            <% } %>
+        <% } else { %>
+            <div class="container mx-auto mt-2">
+                <h2 class="text-2xl text-center">مطلبی برای نمایش وجود ندارد.</h2>
+            </div>
+        <% } %>
+
+    </main>
+</body>
+
+</html>

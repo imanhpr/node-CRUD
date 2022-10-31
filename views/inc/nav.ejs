@@ -1,0 +1,30 @@
+<nav class="bg-zinc-800 py-4">
+    <div class="container mx-auto
+    flex flex-col lg:flex-row justify-between items-center">
+        <div>
+            <h1 class="text-4xl min-w-max"><a href="/">Simple ExpressJs Crud</a></h1>
+        </div>
+        <div class="lg:w-1/2 w-full">
+            <ul class="flex flex-col lg:flex-row justify-evenly items-center">
+                <li class="text-2xl hover:text-yellow-300 <% if (path === '/') {%> text-yellow-500  <%}%> "><a
+                        href="/">خانه</a></li>
+                <% if (isAuth) { %>
+                    <li class="text-2xl">
+                        <a class="hover:text-yellow-300" href="/account/logout">خروج</a>
+                        <span class="text-2xl">/</span>
+                        <a class="px-2 py-1 rounded text-black <% if (path === '/profile') {%> bg-yellow-600<%}else{%> bg-yellow-400 <%}%>" href="/profile">پروفایل</a>
+                    </li>
+                <% } else { %>
+                    <li class="text-2xl">
+                        <a href="/account/login"
+                            class="hover:text-yellow-300 <% if (path === '/account/login') {%> text-yellow-500 <%}%>  ">ورود</a>
+                        <span>/</span>
+                        <a href="/account/register"
+                            class="hover:text-yellow-300 <% if (path ==='/account/register') {%> text-yellow-500 <%}%> ">ثبت
+                            نام</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>

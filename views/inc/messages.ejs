@@ -1,0 +1,10 @@
+<% if (errors.length>= 1) {%>
+    <% for (error of errors) {%>
+    <div
+        class="container mx-auto text-xl mt-3 rounded px-2 py-1 bg-<%= error.color %>-300 text-<%= error.color %>-700 outline outline-3 outline-<%= error.color %>-700">
+        <p class="">
+            <%= error.message %>
+        </p>
+    </div>
+    <% } %> 
+<% } %>
